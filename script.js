@@ -37,3 +37,10 @@ function getRandomMessage() {
 function getRandomTypes () {
     return types[ Math.floor(Math.random() * types.length )];
 }
+
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.key === 'u') {
+        event.preventDefault(); // Prevent the default "View Page Source" action
+        alert('View Page Source is disabled!');
+    }
+});
